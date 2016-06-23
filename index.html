@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>D_Code Vision</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/ext_style.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="source/style.css" rel="stylesheet" />
+    <link href="source/perspectiveRules.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+
+</head>
+
+<body onload="go()">
+    <div class="container" style="position:absolute;z-index:200">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4" id="left"></div>
+            <div class="col-xs-12 col-sm-4 col-md-4" id="logo_anim">
+                <div id="loader"></div>
+                <div class="loader-section section-left"></div>
+                <div class="loader-section section-right"></div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4" id="right"></div>
+        </div>
+    </div>
+    <div class="box" style="position:absolute;z-index:200">
+        <a id="myLink" href="#" style="display:none;">
+            <img src="./img/email.png" class="effectTada" id="home" onclick="startAnim()" />
+        </a>
+    </div>
+
+    <div id="demo1">
+        <img alt="background" src="source/back.jpg" />
+        <div id="particle-target"></div>
+        <img src="img/logo.png" id="text" />
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="source/jquery.logosDistort.min.js"></script>
+    <script src="source/jquery.particleground.min.js"></script>
+    <script>
+        var particles = true,
+            particleDensity,
+            options = {
+                effectWeight: 1,
+                outerBuffer: 1.08,
+                elementDepth: 220
+            };
+
+        $(document).ready(function () {
+
+            $("#demo1").logosDistort(options);
+
+            if (particles) {
+                particleDensity = window.outerWidth * 7.5;
+                if (particleDensity < 13000) {
+                    particleDensity = 13000;
+                } else if (particleDensity > 20000) {
+                    particleDensity = 20000;
+                }
+                return $('#particle-target').particleground({
+                    dotColor: '#1ec5ee',
+                    lineColor: '#F20056',
+                    density: particleDensity.toFixed(0),
+                    parallax: false
+                });
+            }
+        });
+    </script>
+    <script type="text/javascript">
+        function startAnim() {
+            document.getElementById("home").className = 'enter';
+            document.getElementsByTagName("body")[0].style.transitionDuration = "4s";
+            document.getElementsByTagName("body")[0].style.transformOrigin = "50% 100%";
+            document.getElementsByTagName("body")[0].style.transform = "rotateX(100deg)";
+            setTimeout("homePage()", 2000);
+        }
+
+        function homePage() {
+            window.location.assign("home.html");
+        }
+    </script>
+    <script>
+        function go() {
+            setTimeout("enableLink()", 9000);
+        }
+
+        function enableLink() {
+            document.getElementById('myLink').style.display = "block";
+        }
+    </script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+   <link rel="prefetch" href="./vids/Produce_1_480p.mp4" />
+   <link rel="prefetch" href="./img/1.jpg" />
+   <link rel="prefetch" href="./img/2.jpg" />
+   <link rel="prefetch" href="./img/2.jpg" />
+   <link rel="prefetch" href="./img/3.jpg" />
+   <link rel="prefetch" href="./img/ab.jpg" />
+   <link rel="prefetch" href="./img/back.png" />
+   <link rel="prefetch" href="./img/bk1.jpg" />
+   <link rel="prefetch" href="./img/bk2.jpg" />
+   <link rel="prefetch" href="./img/bk4.jpg" />
+   <link rel="prefetch" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js" />
+
+
+</body>
+
+</html>

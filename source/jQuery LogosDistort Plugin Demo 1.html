@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- saved from url=(0103)http://www.jqueryscript.net/demo/jQuery-Plugin-For-3D-Perspective-Transforms-On-Mousemove-LogosDistort/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>jQuery LogosDistort Plugin Demo 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://www.jqueryscript.net/demo/jQuery-Plugin-For-3D-Perspective-Transforms-On-Mousemove-LogosDistort/assets/css/style.css" rel="stylesheet">
+    <link href="http://www.jqueryscript.net/demo/jQuery-Plugin-For-3D-Perspective-Transforms-On-Mousemove-LogosDistort/assets/css/perspectiveRules.css" rel="stylesheet">
+</head>
+<body>
+<div id="demo1"><div class="ld-smart-container"><div class="ld-overlap-container" style="width: 1468.8px; height: 646.92px; left: -54.4px; top: -23.96px;"><div class="ld-3d-parent"><div class="ld-transform-target ld-transform-active" style="transform: matrix3d(0.99069, 0, 0.00714, 0, -0.00011, 0.99943, -0.01728, 0, -0.00714, -0.01728, 0.99943, 0, 0, 0, 100, 1)"><img alt="background" src="./jQuery LogosDistort Plugin Demo 1_files/background.png" class="ld-3d-object" width="2133" height="1200" style="transform: translate3d(-54.4px, -91.44px, 220px); width:1468.80px; height:825.89px;"><div id="particle-target" class="ld-3d-object" style="transform: translate3d(-54.4px, -23.96px, 440px); width:1468.80px; height:646.92px;"><canvas class="pg-canvas" width="1469" height="647"></canvas></div><img alt="logo" src="./jQuery LogosDistort Plugin Demo 1_files/logo.png" class="ld-3d-object" width="2133" height="1200" style="transform: translate3d(-54.4px, -113.44px, 660px); width:1468.80px; height:825.88px;"></div></div></div></div></div>
+
+<script type="text/javascript" async="" src="./jQuery LogosDistort Plugin Demo 1_files/ga.js"></script><script src="./jQuery LogosDistort Plugin Demo 1_files/jquery.min.js"></script>
+<script src="./jQuery LogosDistort Plugin Demo 1_files/jquery.logosDistort.min.js"></script>
+<script src="./jQuery LogosDistort Plugin Demo 1_files/jquery.particleground.min.js"></script>
+<script>
+    var particles = true,
+        particleDensity,
+        options = {
+            effectWeight: 1,
+            outerBuffer: 1.08,
+            elementDepth: 220
+        };
+
+    $(document).ready(function() {
+
+        $("#demo1").logosDistort(options);
+
+        if (particles) {
+            particleDensity = window.outerWidth * 7.5;
+            if (particleDensity < 13000) {
+                particleDensity = 13000;
+            } else if (particleDensity > 20000) {
+                particleDensity = 20000;
+            }
+            return $('#particle-target').particleground({
+                dotColor: '#1ec5ee',
+                lineColor: '#0a4e90',
+                density: particleDensity.toFixed(0),
+                parallax: false
+            });
+        }
+    });
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script><p style="-webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);"></p>
+
+
+</body></html>
