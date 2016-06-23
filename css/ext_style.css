@@ -69,25 +69,25 @@ body{
     from {width: 0%;background-color:#F433FF;box-shadow: 3px 3px 15px 1px #b87bd8;}
     to {width: 36%; border-left: 70px solid transparent;
     border-right: 70px solid transparent;
-    border-top: 100px solid red;background-color:#C12283;box-shadow: 3px 3px 15px 1px #b87bd8;}
+    background-color:#C12283;box-shadow: 3px 3px 15px 1px #b87bd8;}
 } 
 @-webkit-keyframes right_anim {
     from {width: 0%;background-color:#F433FF;box-shadow: 3px 3px 15px 1px #b87bd8;}
     to {width: 36%;border-left: 70px solid transparent;
     border-right: 70px solid transparent;
-    border-top: 100px solid red;background-color:#C12283;box-shadow: 3px 3px 15px 1px #b87bd8;}
+    background-color:#C12283;box-shadow: 3px 3px 15px 1px #b87bd8;}
 } 
 @-moz-keyframes left_anim {
    from {width: 0%;background-color:#F433FF;box-shadow: 3px 3px 15px 1px #b87bd8;}
     to {width: 36%;  -moz-border-left: 70px solid transparent;
      -moz-border-right: 70px solid transparent;
-     -moz-border-top: 100px solid red;background-color:#C12283;box-shadow: 3px 3px 15px 1px #b87bd8;}
+     background-color:#C12283;box-shadow: 3px 3px 15px 1px #b87bd8;}
 }
 @-moz-keyframes right_anim {
     from {width: 0%;background-color:#F433FF;box-shadow: 3px 3px 15px 1px #b87bd8;}
     to {width: 36%; -moz-border-left: 70px solid transparent;
      -moz-border-right: 70px solid transparent;
-     -moz-border-top: 100px solid red;background-color:#C12283;box-shadow: 3px 3px 15px 1px #b87bd8;}
+     background-color:#C12283;box-shadow: 3px 3px 15px 1px #b87bd8;}
 } 
 
 /************************************************************************************************/
