@@ -8,10 +8,10 @@
     <meta name="description" content="Developer Group - DCODE VISION" />
     <meta name="keywords" content="developer,HTML,CSS,Javascript,PHP" />
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery-1.11.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/modernizr.custom.js"></script>
-    <script src="js/jquery-1.11.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="css/demo.css" />
@@ -25,7 +25,7 @@
     <link href='https://fonts.googleapis.com/css?family=PT+Mono&subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Tulpen+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Sail' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="https://www.dreamtemplate.com/dreamcodes/social_icons/tsc_social_icons.css" />
+    <link rel="stylesheet" type="text/css" href="css/tsc_social_icons.css" />
     <link href='https://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Spinnaker' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
@@ -180,13 +180,15 @@ $(document).ready(function () {
 
 
       //playing the video
-      $('#myVideo').get(0).play();
+//      $('#myVideo').get(0).play();
     }
   });
   document.getElementsByTagName("body")[0].style.transitionDuration = "4s";
   document.getElementsByTagName("body")[0].style.transformOrigin = "50% 100%";
   document.getElementsByTagName("body")[0].style.transform = "rotateX(0deg)";
 });
+
+setTimeout(function(){ $('#myVideo').get(0).play(); }, 1000);
     </script>
   </head>
 
@@ -242,7 +244,7 @@ $(document).ready(function () {
             <a class="btn page-scroll" href="#secondPage"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
           </div>
         </header>
-        <video autoplay loop muted id="myVideo">
+        <video loop muted id="myVideo">
           <source src="./vids/Produce_1_480p.mp4" type="video/mp4">
         </video>
       </div>
